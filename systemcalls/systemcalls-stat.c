@@ -16,26 +16,30 @@ int main(int argc, char **argv) {
   printf("File inode: %ld\n", fileStat.st_ino);
 
   printf("File permissions: ");
-  /* S_IRWXU     00700   owner has read, write, and execute permission
+
+  /* some info about the provided static variables:
+   * S_IRWXU     00700   owner has read, write, and execute permission
    * S_IRUSR     00400   owner has read permission
    * S_IWUSR     00200   owner has write permission
-   * S_IXUSR     00100   owner has execute permission
-   * S_IRWXG     00070   group has read, write, and execute permission
-   * S_IRGRP     00040   group has read permission
-   * S_IWGRP     00020   group has write permission
-   * S_IXGRP     00010   group has execute permission
-   * S_IRWXO     00007   others  (not  in group) have read, write, and execute permission
-   * S_IROTH     00004   others have read permission
-   * S_IWOTH     00002   others have write permission
-   * S_IXOTH     00001   others have execute permission*/
+   * S_IXUSR     00100   owner has execute permission */
   printf((fileStat.st_mode & S_IRUSR) ? "r" : "-");
   printf((fileStat.st_mode & S_IWUSR) ? "w" : "-");
   printf((fileStat.st_mode & S_IXUSR) ? "x" : "-");
 
+    /* some info about the provided static variables:
+   * S_IRWXG     00070   group has read, write, and execute permission
+   * S_IRGRP     00040   group has read permission
+   * S_IWGRP     00020   group has write permission
+   * S_IXGRP     00010   group has execute permission */
   printf((fileStat.st_mode & S_IRGRP) ? "r" : "-");
   printf((fileStat.st_mode & S_IWGRP) ? "w" : "-");
   printf((fileStat.st_mode & S_IXGRP) ? "x" : "-");
 
+  /* some info about the provided static variables:
+   * S_IRWXO     00007   others (not in group) have read, write, and execute permission
+   * S_IROTH     00004   others have read permission
+   * S_IWOTH     00002   others have write permission
+   * S_IXOTH     00001   others have execute permission */
   printf((fileStat.st_mode & S_IROTH) ? "r" : "-");
   printf((fileStat.st_mode & S_IWOTH) ? "w" : "-");
   printf((fileStat.st_mode & S_IXOTH) ? "x" : "-");
