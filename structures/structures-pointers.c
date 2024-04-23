@@ -17,5 +17,5 @@ int main() {
   // set values via arrow operator
   emp->salary = 3.7;
   emp->identifier = 567;
-    printf("The employee has:\n\t-salary: %f\n\t-identifier: %d\n", emp->salary, emp->identifier);
+  printf("The employee has:\n\t-salary: %f\n\t-identifier: %d\n", emp->salary, emp->identifier);
 }
