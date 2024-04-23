@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void main() {
   int A[] = {1, 5, 3, 2, 7};
@@ -17,4 +18,14 @@ void main() {
   pA--;
   printf("Go back to the first element of the array: %d\n", *pA);
 
+
+  int *chars = calloc(10, sizeof(char));
+  for (int i = 0; i < 10; i++) {
+    chars[i] = 'd'+i;
+  }
+  printf("The dynamic array is:");
+  for (int i = 0; i < 10; i++) {
+    printf(" %c", chars[i]);
+  }
+  printf("\n");
 }
