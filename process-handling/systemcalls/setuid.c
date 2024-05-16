@@ -12,6 +12,6 @@ int main() {
     return EXIT_FAILURE;
   }
 
-  printf("The ID of the user that executed this process was: %d, now is: %d\n", oldUserId, newUserId);
+  printf("The ID of the real user that executed this process was: %d, now is: %d\n", oldUserId, newUserId);
   return EXIT_SUCCESS;
 }

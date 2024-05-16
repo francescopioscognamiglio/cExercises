@@ -12,6 +12,6 @@ int main() {
     return EXIT_FAILURE;
   }
 
-  printf("The ID of the group of the user that executed this process was: %d, now is: %d\n", oldGroupId, newGroupId);
+  printf("The ID of the group of the real user that executed this process was: %d, now is: %d\n", oldGroupId, newGroupId);
   return EXIT_SUCCESS;
 }

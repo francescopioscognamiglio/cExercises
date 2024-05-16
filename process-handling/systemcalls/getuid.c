@@ -3,5 +3,5 @@
 
 void main() {
   int userId = getuid();
-  printf("The ID of the user that executed this process is: %d\n", userId);
+  printf("The ID of the real user that executed this process is: %d\n", userId);
 }
