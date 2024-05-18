@@ -1,7 +1,8 @@
-*.out
-*.test
-*.gch
-*.o
+# exclude all files
 *
+# include all directories
+!*/
+# include all c sources
 !*.c
+# include all c headers
 !*.h
