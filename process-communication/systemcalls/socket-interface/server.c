@@ -59,7 +59,7 @@ int main(int argc, char **argv) {
     if (pid == 0) {
       // child process
       // useful to perform calculations without blocking other pending requests
-      snprintf(sendBuffer, sizeof(sendBuffer), "This is the message to the client %d\n", i);
+      snprintf(sendBuffer, sizeof(sendBuffer), "This is the message to the client %d", i);
 
       // send the message to the socket
       // since I have the file descriptor, I can use the write system call instead of the send one
